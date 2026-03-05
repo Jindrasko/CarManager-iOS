@@ -3,10 +3,10 @@ A native iOS application built with SwiftUI and Core Data for tracking vehicle m
 
 ## Technologies:
 
-Swift / SwiftUI — declarative UI framework
-Core Data — local persistent storage
-MapKit — location picking and map display
-Charts — pie chart for expense breakdown by category
+Swift / SwiftUI - declarative UI framework
+Core Data - local persistent storage
+MapKit - location picking and map display
+Charts - pie chart for expense breakdown by category
 
 ## Features:
 
