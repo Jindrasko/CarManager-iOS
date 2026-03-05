@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G624" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Event" representedClassName="Event" syncable="YES">
+        <attribute name="cost" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="done" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="eventCategory" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="everyKm" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="everyMonth" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="longDescription" optional="YES" attributeType="String"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="onceAtKm" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="onceDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="eventXVehicle" maxCount="1" deletionRule="Nullify" destinationEntity="Vehicle" inverseName="vehicleXEvent" inverseEntity="Vehicle"/>
+    </entity>
+    <entity name="Vehicle" representedClassName="Vehicle" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="dateOfPurchase" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="fuelType" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="licencePlate" optional="YES" attributeType="String"/>
+        <attribute name="manufacturer" optional="YES" attributeType="String"/>
+        <attribute name="mileage" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="model" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="vin" optional="YES" attributeType="String"/>
+        <attribute name="yearOfManufacture" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="vehicleXEvent" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Event" inverseName="eventXVehicle" inverseEntity="Event"/>
+    </entity>
+    <elements>
+        <element name="Event" positionX="-54.5601806640625" positionY="40.07427978515625" width="128" height="224"/>
+        <element name="Vehicle" positionX="166.8732299804688" positionY="14.15960693359375" width="174.7191162109375" height="209"/>
+    </elements>
+</model>
